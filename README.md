@@ -2,12 +2,12 @@ CRUD(Cadastro, listagem, Edição e exclusão) em um sistema de fluxo entre apar
 
 Instruções para a execução do CRUD.
 
-1- É necessário ter o programa docker instalado e rodando na máquina durante a execução do código. Para rodar o ambiente local.
-2- Ter a extensão remote container no visual studio code.
-3 - ctrl + shift + p abrir open folder container.
-4- no terminal digitar o comando php artisan migrate .
-5- Logo em seguida rodar também o comando : php artisan serve.
-6- Aceitar o direcionamento para o seu navegador.
+1- É necessário ter o programa docker instalado e rodando na máquina durante a execução do código. Para rodar o ambiente local. <br />
+2- Ter a extensão remote container no visual studio code.<br/>
+3 - ctrl + shift + p abrir open folder container.<br/>
+4- no terminal digitar o comando php artisan migrate .<br/>
+5- Logo em seguida rodar também o comando : php artisan serve.<br/>
+6- Aceitar o direcionamento para o seu navegador.<br />
 7- acrescentar ao final do endereço /apartamento para cadastrar o apartamento, e logo após o /morador para cadastrar o morador. (estritamente nessa ordem).
 
 Em caso de dificuldade para a execução do programa, deixo meu email á disposição cahuamalveira@gmail.com 
