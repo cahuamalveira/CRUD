@@ -11,7 +11,7 @@ class morador extends Model
 
     public function apartamento()
     {
-        return $this->belongsTo(apartamento::class);
+        return $this->belongsTo(apartamento::class, 'apartamento_id', 'id');
     }
 
     protected $fillable = [

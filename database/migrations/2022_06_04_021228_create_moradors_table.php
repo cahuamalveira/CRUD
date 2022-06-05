@@ -14,16 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create(
-            'moradores',
+            'moradors',
             function (Blueprint $table) {
                 $table->id();
                 $table->string('nome');
                 $table->string('telefone');
                 $table->string('email');
-                $table->integer('apartamento_id')->unsigned();
-                $table->timestamps();
-
+                $table->unsignedBigInteger('apartamento_id');
                 $table->foreign('apartamento_id')->references('id')->on('apartamentos')->onDelete('cascade');
+                $table->timestamps();
             }
         );
     }
@@ -35,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('moradors');
+        Schema::dropIfExists('moradores');
     }
 };

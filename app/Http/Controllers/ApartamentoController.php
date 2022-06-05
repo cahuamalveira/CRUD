@@ -56,7 +56,8 @@ class ApartamentoController extends Controller
      */
     public function show(apartamento $apartamento)
     {
-        return view('apartamento.show', compact('apartamento'));
+        $moradores = $apartamento->morador()->get();
+        return view('apartamento.show', compact('apartamento', 'moradores'));
     }
 
     /**

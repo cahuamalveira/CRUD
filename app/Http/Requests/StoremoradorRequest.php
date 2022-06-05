@@ -26,7 +26,8 @@ class StoremoradorRequest extends FormRequest
         return [
             'nome' => 'required',
             'telefone' => 'required',
-            'email' => 'required'
+            'email' => 'required',
+            'apartamento_id' => 'required'
         ];
     }
 }

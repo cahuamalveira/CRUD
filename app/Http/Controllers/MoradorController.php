@@ -41,6 +41,10 @@ class MoradorController extends Controller
         $validatedInput = $request->validated();
 
         $apartamento = apartamento::find($validatedInput['apartamento_id']);
+        if (is_null($apartamento)) {
+            return redirect()->route('morador.index')
+            ->withMessage('Apartamento não encontrado');
+        }
 
         $morador = new morador();
         $morador->nome = $validatedInput['nome'];
@@ -86,11 +90,20 @@ class MoradorController extends Controller
     {
         $validatedInput = $request->validated();
 
+        $apartamento = apartamento::find($validatedInput['apartamento_id']);
+        if (is_null($apartamento)) {
+            return redirect()->route('morador.index')
+            ->withMessage('Apartamento não encontrado');
+        }
+
         $morador->update([
             'nome' => $validatedInput['nome'],
             'telefone' => $validatedInput['telefone'],
-            'email' => $validatedInput['email']
+            'email' => $validatedInput['email'],
+            'apartamento_id' => $validatedInput['apartamento_id']
         ]);
+
+        $apartamento->morador()->save($morador);
 
         return redirect()->route('morador.index')
         ->with('success', 'Morador atualizado com sucesso');

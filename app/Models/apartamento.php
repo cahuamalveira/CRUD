@@ -10,7 +10,7 @@ class apartamento extends Model
     use HasFactory;
     public function morador()
     {
-        return $this->hasMany(morador::class);
+        return $this->hasMany(morador::class, 'apartamento_id', 'id');
     }
 
     protected $fillable = [

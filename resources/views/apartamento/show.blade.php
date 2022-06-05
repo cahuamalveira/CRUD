@@ -17,5 +17,18 @@
 		<strong>Número de quartos: </strong>
 		{!! $apartamento->numero_quartos !!}
 	</div>
+	<div class="col-12 mb-3">
+		<h3>Moradores: </h3>
+		@foreach ($moradores as $morador)
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-body">
+					<h4> {{ $morador->nome }} </h4>
+					<h4> {{ $morador->telefone }} </h4>
+				</div>
+			</div>
+		</div>
+		@endforeach
+	</div>
 </div>
 @endsection

@@ -30,16 +30,21 @@
 			@method('PUT')
 			<div class="mb-3">
 				<label for="nome" class="form-label">Nome</label>
-				<input type="text" class="form-control" value="{{$morador->nome}} id="nome" name="nome" placeholder="nome">
+				<input type="text" class="form-control" value="{{$morador->nome}}" id="nome" name="nome" placeholder="nome">
 			</div>
 			<div class="mb-3">
 				<label for="telefone" class="form-label">Telefone</label>
-				<input type="text" id="telefone" name="telefone" value="{{$morador->telefone}} placeholder="telefone"></textarea>
+				<input type="text" id="telefone" name="telefone" value="{{$morador->telefone}}" placeholder="telefone"></textarea>
 			</div>
 
 			<div class="mb-3">
 				<label for="email" class="form-label">E-mail</label>
-				<input type="email" id="email" name="email" value="{{$morador->email}} placeholder="email"></textarea>
+				<input type="email" id="email" name="email" value="{{$morador->email}}" placeholder="email"></textarea>
+			</div>
+
+			<div class="mb-3">
+				<label for="apartamento_id" class="form-label">Número do apartamento</label>
+				<input type="number" id="apartamento_id" name="apartamento_id" value="{{$morador->apartamento_id}}">
 			</div>
 			<button type="submit" class="btn btn-primary">Editar</button>
 		</form>
